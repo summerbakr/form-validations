@@ -4,20 +4,23 @@
 
 <div class="text-center">
 @using FormValidations.Models;
-@model User;
+@model Survey;
     <form action="/submit" method="post">
-    <p>Your First Name: 
-        <input type="text" asp-for="FirstName"/>
-        <span style="color: red;" asp-validation-for="FirstName"></span>
+    <p>Your Full Name: 
+        <input type="text" asp-for="Name"/>
+        <span style="color: red;" asp-validation-for="Name"></span>
     </p>
-    <p>Your Last Name: <input type="text" asp-for="LastName"/>
-    <span style="color: red;" asp-validation-for="LastName"></span></p>
-    <p>Age: <input asp-for="Age" /> 
-    <span style="color: red;" asp-validation-for="Age"></span></p>
-    <p>Email:<input asp-for="Email"/>
-    <span style="color: red;" asp-validation-for="Email"></span></p>
-    <p>Password: <input asp-for="Password"/>
-    <span style="color: red;" asp-validation-for="Password"></span></p>
+    <p>Your Location Name: <input type="text" asp-for="Location"/>
+    <span style="color: red;" asp-validation-for="Location"></span></p>
+    <p>Your Favorite Language: <select asp-for="Language">
+        <option value="C#">C#</option>
+        <option value="Python">Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Ruby">Ruby</option>
+    </select> 
+    <span style="color: red;" asp-validation-for="Location"></span></p>
+    <p>Comment (optional):<input asp-for="Comment"/>
+    <span style="color: red;" asp-validation-for="Comment"></span></p>
     <input type="Submit" value="Submit Form"/>
     </form>
     

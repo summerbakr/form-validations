@@ -19,10 +19,10 @@ namespace FormValidations.Controllers
         [HttpPost]
         [Route("submit")]
 
-        public IActionResult FormResult(User newuser)
+        public IActionResult FormResult(Survey newsurvey)
             {   if (ModelState.IsValid)
                 {
-                    ViewBag.User=newuser;
+                    ViewBag.Survey=newsurvey;
                     return View();}
                 else {
                     return View("Index");

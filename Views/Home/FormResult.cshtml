@@ -7,14 +7,15 @@
 </head>
 <body>
 @using FormValidations.Models;
-@model User;
-<h1>Success!! You have created your user!</h1>
+@model Survey;
+
+<h1>Success!! You have submitted your survey!</h1>
     <h2>Here is the information you submitted:</h2>
-    <p>First Name: @ViewBag.User.FirstName</p>
-    <p>Last Name: @ViewBag.User.LastName</p>
-    <p>Your Age: @ViewBag.User.Age</p>
-    <p>Your Email: @ViewBag.User.Email</p>
-    <p>Your Password: @ViewBag.User.Password</p>
+    <p>Full Name: @ViewBag.Survey.Name</p>
+    <p>Dojo Location: @ViewBag.Survey.Location</p>
+    <p>Your Fave Language: @ViewBag.Survey.Language</p>
+    <p>Your Comment (Optional): @ViewBag.Survey.Comment</p>
+
 
     <a href="/">Back to form!</a>
 

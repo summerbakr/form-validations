@@ -2,27 +2,22 @@ using System.ComponentModel.DataAnnotations;
 namespace FormValidations.Models
 
 {
-public class User
+public class Survey
 {   
     [Required]
-    [MinLength(4, ErrorMessage="Sorry too short!")]
-    public string FirstName{get; set;}
+    [MinLength(2, ErrorMessage="Sorry too short!")]
+    public string Name{get; set;}
 
     [Required]
-    [MinLength(4)]
-    public string LastName{get; set;}
+    public string Location{get; set;}
 
-    [Required]
-    [Range(0,120, ErrorMessage="Enter a valid age!")]
-    public string Age{get; set;}
-
-    [Required]
-    [EmailAddress]
-    public string Email{get; set;}
     
+
     [Required]
-    [DataType(DataType.Password)]
-    public string Password{get; set;}
+    public string Language{get; set;}
+    
+    [MaxLength(20)]
+    public string Comment{get; set;}
     
 }
 }
