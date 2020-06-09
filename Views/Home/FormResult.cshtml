@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+@using FormValidations.Models;
+@model User;
+<h1>Success!! You have created your user!</h1>
+    <h2>Here is the information you submitted:</h2>
+    <p>First Name: @ViewBag.User.FirstName</p>
+    <p>Last Name: @ViewBag.User.LastName</p>
+    <p>Your Age: @ViewBag.User.Age</p>
+    <p>Your Email: @ViewBag.User.Email</p>
+    <p>Your Password: @ViewBag.User.Password</p>
+
+    <a href="/">Back to form!</a>
+
+</body>
+</html>
